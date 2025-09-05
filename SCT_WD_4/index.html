@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <style>
+    body { font-family: Arial; display: flex; justify-content: center; margin-top: 50px; }
+    .todo { width: 400px; }
+    input { width: 70%; padding: 10px; }
+    button { padding: 10px; margin: 5px; cursor: pointer; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; padding: 10px; background: #f0f0f0; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; }
+    .completed { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <div class="todo">
+    <h2>✅ To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add new task...">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    const taskList = document.getElementById("taskList");
+
+    function addTask() {
+      let taskInput = document.getElementById("taskInput");
+      let taskText = taskInput.value.trim();
+      if (taskText === "") return;
+      let li = document.createElement("li");
+      li.innerHTML = `
+        <span onclick="toggleComplete(this)">${taskText}</span>
+        <div>
+          <button onclick="editTask(this)">Edit</button>
+          <button onclick="deleteTask(this)">Delete</button>
+        </div>
+      `;
+      taskList.appendChild(li);
+      taskInput.value = "";
+    }
+
+    function toggleComplete(el) { el.classList.toggle("completed"); }
+    function deleteTask(btn) { btn.parentElement.parentElement.remove(); }
+    function editTask(btn) {
+      let newTask = prompt("Edit task:", btn.parentElement.previousElementSibling.innerText);
+      if (newTask) btn.parentElement.previousElementSibling.innerText = newTask;
+    }
+  </script>
+</body>
+</html>
