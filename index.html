@@ -4,12 +4,7 @@
   <meta charset="UTF-8">
   <title>Web Development Tasks</title>
   <style>
-    /* Reset & Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background: linear-gradient(135deg, #ece9e6, #ffffff);
@@ -33,13 +28,10 @@
       color: #222;
       margin-bottom: 10px;
     }
-    p {
-      color: #555;
-      margin-bottom: 40px;
-    }
+    p { color: #555; margin-bottom: 40px; }
     .tasks {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
     .task-card {
@@ -52,6 +44,9 @@
       font-size: 18px;
       font-weight: 600;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .task-card:hover {
       background: #0078d7;
@@ -72,10 +67,10 @@
     <p>Select a task to view the project:</p>
     
     <div class="tasks">
-      <a href="Task_1/index.html" class="task-card">Task 1 – Landing Page</a>
-      <a href="Task_2/index.html" class="task-card">Task 2 – Calculator</a>
-      <a href="Task_3/index.html" class="task-card">Task 3 – Portfolio</a>
-      <a href="Task_4/index.html" class="task-card">Task 4 – Stopwatch</a>
+      <a href="SCT_WD_1/index.html" class="task-card">Task 1 – Landing Page</a>
+      <a href="SCT_WD_2_ALT/index.html" class="task-card">Task 2 – Calculator</a>
+      <a href="SCT_WD_3_ALT/index.html" class="task-card">Task 3 – Portfolio</a>
+      <a href="SCT_WD_4/index.html" class="task-card">Task 4 – Stopwatch</a>
     </div>
     
     <footer>© 2025 Ayaan Pervez | Web Dev Projects</footer>
