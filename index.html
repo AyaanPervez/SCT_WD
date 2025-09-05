@@ -2,15 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Web Development Tasks</title>
+  <title>Web Development Tasks</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .tasks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .task-card {
+      padding: 20px;
+      border-radius: 10px;
+      background: #f4f6f8;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #222;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .task-card:hover {
+      background: #0078d7;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Web Development Tasks</h1>
-  <ul>
-    <li><a href="Task_1/">Task 1 - Landing Page</a></li>
-    <li><a href="Task_2/">Task 2 - Calculator</a></li>
-    <li><a href="Task_3/">Task 3 - Portfolio</a></li>
-    <li><a href="Task_4/">Task 4 - Stopwatch</a></li>
-  </ul>
+  <div class="container">
+    <h1>My Web Development Tasks</h1>
+    <p>Select a task to view the project:</p>
+    
+    <div class="tasks">
+      <a href="Task_1/index.html" class="task-card">Task 1 – Landing Page</a>
+      <a href="Task_2/index.html" class="task-card">Task 2 – Calculator</a>
+      <a href="Task_3/index.html" class="task-card">Task 3 – Portfolio</a>
+      <a href="Task_4/index.html" class="task-card">Task 4 – Stopwatch</a>
+    </div>
+    
+    <footer>© 2025 Ayaan Pervez | Web Dev Projects</footer>
+  </div>
 </body>
 </html>
